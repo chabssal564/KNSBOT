@@ -1,4 +1,5 @@
 import discord
+import os
 
 intents = discord.Intents.default()
 intents.members = True
@@ -36,5 +37,6 @@ async def on_message(message):
         ch = client.get_channel(int(message.content[6:24]))
         await ch.send(message.content[25:])
         await message.delete()
-        
-client.run("ODEyMzk0Mzg0NDEzOTQ5OTYy.YDAHOg.s_iUJbhMgT7E6gQb_dvWHzgLUew")
+
+access_token = os.environ["BOT_TOKEN"]     
+client.run("access_token")
