@@ -38,5 +38,5 @@ async def on_message(message):
         await ch.send(message.content[25:])
         await message.delete()
 
-access_token = os.environ["BOT_TOKEN"]     
+access_token = os.environ['BOT_TOKEN']     
 client.run("access_token")
